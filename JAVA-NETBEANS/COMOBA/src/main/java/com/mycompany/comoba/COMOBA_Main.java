@@ -3,11 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package com.mycompany.comoba;
-
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  *
  * @author jordi
  */
+
+
+@SpringBootApplication
 public class COMOBA_Main {
 
     /**
@@ -15,11 +19,13 @@ public class COMOBA_Main {
      */
     public static void main(String[] args) {
         
-        Usuari usuari1 = new Usuari("Sergi10", "1234567685987034225", "sergi245386572@ejemplo.com");
+        SpringApplication.run(COMOBA_Main.class, args);
         
-        UserDAO.printUserDetails();
+        SpringApplication.run(SubirImagen.class, args);
+
+        /*Usuari usuari1 = new Usuari("Sergi10", "1234567685987034225", "sergi245386572@ejemplo.com");*/
         
-        UserDAO.insertUser("user4","password4","user4@emial.com");
+        
     }
     
 }

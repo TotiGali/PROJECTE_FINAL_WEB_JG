@@ -39,49 +39,48 @@ public class UsuariController {
     
     // Inyecta una instancia de PersonRepository, que proporciona métodos para interactuar con la base de datos
     @Autowired
-    private PersonRepository personRepository;
+    private UsuariRepository usuariRepository;
 
     // Maneja las solicitudes GET a /persons para obtener una lista de todas las personas
     @GetMapping
-    public List<Person> getAllPersons() {
+    public List<Usuari> getAllUsuari() {
         // Llama al método findAll() del repositorio para obtener todas las personas
-        return personRepository.findAll();
+        return usuariRepository.findAll();
     }
 
     // Maneja las solicitudes GET a /persons/{id} para obtener una persona específica por su ID
-    @GetMapping("/{id}")
-    public ResponseEntity<Person> getPersonById(@PathVariable Long id) {
+    @GetMapping("/{idUsuari}")
+    public ResponseEntity<Usuari> getPersonById(@PathVariable Long idUsuari) {
         // Busca una persona por su ID
-        Optional<Person> person = personRepository.findById(id);
+        Optional<Usuari> usuari = usuariRepository.findById(idUsuari);
         // Si se encuentra la persona, devuelve una respuesta HTTP 200 (OK) con la persona encontrada
-        if (person.isPresent()) {
-            return ResponseEntity.ok(person.get());
+        if (usuari.isPresent()) {
+            return ResponseEntity.ok(usuari.get());
         } else {
             // Si no se encuentra la persona, devuelve una respuesta HTTP 404 (Not Found)
             return ResponseEntity.notFound().build();
         }
     }
 
-    // Maneja las solicitudes POST a /persons para crear una nueva persona
+    // Maneja las solicitudes POST a /usuari para crear una nou usuari
     @PostMapping
-    public Person createPerson(@RequestBody Person person) {
+    public Usuari createUsuari(@RequestBody Usuari usuari) {
         // Guarda la nueva persona en la base de datos y la devuelve en la respuesta
-        return personRepository.save(person);
+        return usuariRepository.save(usuari);
     }
 
     // Maneja las solicitudes PUT a /persons/{id} para actualizar una persona existente
-    @PutMapping("/{id}")
-    public ResponseEntity<Person> updatePerson(@PathVariable Long id, @RequestBody Person personDetails) {
+    @PutMapping("/{idUsuari}")
+    public ResponseEntity<Usuari> updateUsuari(@PathVariable Long idUsuari, @RequestBody Usuari usuariDetails) {
         // Busca una persona por su ID
-        Optional<Person> person = personRepository.findById(id);
+        Optional<Usuari> usuari = usuariRepository.findById(idUsuari);
         // Si se encuentra la persona, actualiza sus detalles y la guarda
-        if (person.isPresent()) {
-            Person personToUpdate = person.get();
+        if (usuari.isPresent()) {
+            Usuari usuariToUpdate = usuari.get();
             // Actualiza el nombre y la edad de la persona con los detalles proporcionados en la solicitud
-            personToUpdate.setName(personDetails.getName());
-            personToUpdate.setAge(personDetails.getAge());
+            usuariToUpdate.setNom(usuariDetails.getNom());
             // Guarda la persona actualizada y devuelve una respuesta HTTP 200 (OK)
-            return ResponseEntity.ok(personRepository.save(personToUpdate));
+            return ResponseEntity.ok(usuariRepository.save(usuariToUpdate));
         } else {
             // Si no se encuentra la persona, devuelve una respuesta HTTP 404 (Not Found)
             return ResponseEntity.notFound().build();
@@ -89,13 +88,13 @@ public class UsuariController {
     }
 
     // Maneja las solicitudes DELETE a /persons/{id} para eliminar una persona por su ID
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePerson(@PathVariable Long id) {
+    @DeleteMapping("/{idUsuari}")
+    public ResponseEntity<Void> deleteusuari(@PathVariable Long idUsuari) {
         // Busca una persona por su ID
-        Optional<Person> person = personRepository.findById(id);
+        Optional<Usuari> Usuari = usuariRepository.findById(idUsuari);
         // Si se encuentra la persona, la elimina de la base de datos
-        if (person.isPresent()) {
-            personRepository.delete(person.get());
+        if (Usuari.isPresent()) {
+            usuariRepository.delete(Usuari.get());
             // Devuelve una respuesta HTTP 200 (OK) sin contenido
             return ResponseEntity.ok().build();
         } else {
