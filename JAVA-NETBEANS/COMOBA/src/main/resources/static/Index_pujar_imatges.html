@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subir y Recuperar Imágenes</title>
+</head>
+<body>
+    <h1>Subir Imagen</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="imageFile" name="imageFile" accept="image/*, video/mp4" required>
+        <input type="submit" value="Subir Imagen">
+    </form>
+<!-- formatos para accept: audrio/*, video/*, application/pdf, application/msword, application/vnd.ms-excel, text/plain, application/zip -->
+  
+
+    <h1>Recuperar Imagen por ID</h1>
+    <input type="text" id="imageIdInput" placeholder="Introduce el ID de la imagen">
+    <button id="getImageByIdButton">Recuperar Imagen</button>
+    <img id="retrievedImage" src="" alt="Imagen recuperada" style="display:none;">
+
+    <h1>Todas las Imágenes</h1>
+    <button id="getAllImagesButton">Recuperar Todas las Imágenes</button>
+    <div id="allImages"></div>
+    
+    <script src="js/script_imatges.js"></script>
+
+</body>
+</html>

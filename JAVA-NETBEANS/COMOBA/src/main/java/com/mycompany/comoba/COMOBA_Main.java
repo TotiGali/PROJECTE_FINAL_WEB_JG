@@ -21,8 +21,6 @@ public class COMOBA_Main {
         
         SpringApplication.run(COMOBA_Main.class, args);
         
-        SpringApplication.run(SubirImagen.class, args);
-
         /*Usuari usuari1 = new Usuari("Sergi10", "1234567685987034225", "sergi245386572@ejemplo.com");*/
         
         

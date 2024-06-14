@@ -18,6 +18,8 @@ import java.util.stream.Collectors;
 import org.springframework.http.HttpStatus;
 
 @RestController
+@RequestMapping("/images")
+
 public class ImagenController {
 
     @Autowired
@@ -49,7 +51,7 @@ public class ImagenController {
         }
     }
     
-     @GetMapping("/images")
+   
     public ResponseEntity<List<String>> getAllImages() {
         List<Imagen> imagenes = imagenRepository.findAll();
         List<String> imageIds = imagenes.stream()

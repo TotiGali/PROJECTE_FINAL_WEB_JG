@@ -29,7 +29,7 @@ public class Imagen {
     private String nombre;
 
     @Lob
-    private byte[] imagen;
+    private byte[] imagen; 
 
     public Imagen() {
     }
@@ -69,5 +69,4 @@ public class Imagen {
         this.imagen = imagen;
     }
 
-    
 }
