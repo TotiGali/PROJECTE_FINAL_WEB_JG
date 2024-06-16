@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Subir y Recuperar Imágenes</title>
+    <title>Pujar i recuperar imatges</title>
 </head>
 <body>
-    <h1>Subir Imagen</h1>
+    <header>
+        <h1><a href="index.html"><font color="#8b0000">COMOBA</font></a></h1>
+        <p></p>
+    </header>
+    <h3>(Pàgina només accessible per usuaris amb rol admin)</h3>
+    <hr>
+    <h1>Pujar imatge</h1>
     <form id="uploadForm" enctype="multipart/form-data">
         <input type="file" id="imageFile" name="imageFile" accept="image/*, video/mp4" required>
-        <input type="submit" value="Subir Imagen">
+        <input type="submit" value="Pujar imatge">
     </form>
 <!-- formatos para accept: audrio/*, video/*, application/pdf, application/msword, application/vnd.ms-excel, text/plain, application/zip -->
   
 
-    <h1>Recuperar Imagen por ID</h1>
-    <input type="text" id="imageIdInput" placeholder="Introduce el ID de la imagen">
-    <button id="getImageByIdButton">Recuperar Imagen</button>
+    <h1>Recuperar Imatge per ID</h1>
+    <input type="text" id="imageIdInput" placeholder="Introdueix el ID de la imatge">
+    <button id="getImageByIdButton">Recuperar Imatge</button>
     <img id="retrievedImage" src="" alt="Imagen recuperada" style="display:none;">
 
-    <h1>Todas las Imágenes</h1>
-    <button id="getAllImagesButton">Recuperar Todas las Imágenes</button>
+    <h1>Totes les imatges</h1>
+    <button id="getAllImagesButton">Recuperar totes les Imatges</button>
     <div id="allImages"></div>
     
     <script src="js/script_imatges.js"></script>

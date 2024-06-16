@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE-edge">
+    <meta name="viweport" content="width=device-width, initial-scale=1.0">
+    <title>Pàgines enllaçades</title>
+    <style>
+        /* Estilos CSS*/
+        .background {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            }
+
+            .background::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('imatges/Guissona_A1920x960.jpg') no-repeat center center;
+                background-size: cover;
+                opacity: 0.4; /* Ajusta aquest valor per controlar el nivell de transparència */
+                z-index: -1;
+            }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;       
+        }
+        header {
+            background-color: rgba(80, 80, 0, 0.3);
+            padding: 10px;
+            text-align: center;
+            left: 0;
+            top: 0;
+            width: 100%;
+            color:rgba(255, 119, 0, 0.6);
+        }
+        nav {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background-color:rgba(255, 149, 0, 0.6);
+        }
+        section {
+            float: left;
+            margin: 0px;
+            padding: 20px;
+            width: 100%;
+        }
+        footer {
+            background-color: rgba(255, 119, 0, 0.3);
+            padding: 10px;
+            text-align: center;
+            color: #ffffff;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            font-size: 15px;
+            height: 40px;
+        }
+        h1 {
+            text-align: left;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            color: #8b0000;
+        }
+        nav ol li a {
+            text-decoration: none; /* Eliminar subratllat predeterminat */
+            color: #000; /* Color de text predeterminat */
+        }
+        /* Estil per a l'enllaç quan es passa el ratolí per sobre */
+        nav ol li a:hover {
+             color: #00f; /* Color de text quan es passa el ratolí per sobre */
+        }
+        .contenidor-video {
+            text-align: center; /* Centra el contingut del video horitzontalment */
+        }
+    </style>
+</head>
+<body class="background"> 
+    <header>
+        <h1>COMOBA</h1>
+        <p></p>
+    </header>
+    <aside>
+        <nav>
+            <ol>
+                <li><a href="Index_pujar_imatges.html">Carregar imatges</a></li>
+                <li><a href="index_pujar_pedidos">Fer comandes</a></li>
+                <li><a href="index.html"><font color="#8b0000">INICI</font></a></li>
+            </ol>
+        </nav>
+    </aside>
+    <section>
+        <h2>PROJECTES DE MOBILITAT CICLISTA</h2>
+        <hr>  
+        <h3 style="color:white;"> Progama 30' TV3 - Torna la Bici</h3>
+        <hr>  
+        <div class="contenidor-video">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/OdyvJK-hKo4?si=Qux0yQ2ErdlgD8Fn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        
+            </iframe>
+        </div>
+        <hr>  
+    </section>
+    <footer>
+        <h4>&copy; 2024 COMOBA</h4>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const video = document.getElementById('video');
+            const startTime = 19 * 60 + 43; // 19 minuts i 43 segons en segons
+
+            video.addEventListener('loadedmetadata', () => {
+                video.currentTime = startTime;
+            });
+
+            video.addEventListener('timeupdate', () => {
+                if (video.currentTime < startTime) {
+                    video.currentTime = startTime;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

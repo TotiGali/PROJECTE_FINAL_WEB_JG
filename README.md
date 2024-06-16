@@ -31,3 +31,13 @@ Per al  desplegament de l’aplicació en un entorn local cal seguir els següen
 CONFIGURACIONS NECESSÀRIES:
 
 Es necessari disposar de l’aplicatiu Netbeans amb el paquet de jbk que és el controlador per la base de dades.
+
+INSTRUCCIONS PER AL FUNCIONAMENT DEL REPOSITORI EN GIT HUB:
+
+Pel que fa al funcionament del repositori en sí, per tal d’actualizar i dur a terme el control de les versions dels arxius,  cal entrar a la carpeta del projecte clicar al botó dret i seleccionar Open Git Bash Here. 
+
+A continuació des del cmd cal escriure: “ git add *” per afegit tots els arxius,  “git commit –m “la informació que es consideri necessària” i finalment “git push” per pujar les actualitzacions al repositori. 
+
+Si es necessita crear un repositori nou, en primer lloc cal crear-lo des de Git hub i posteriorment copiant l’enllaç del respositori, cal anar a la carpeta on es vol “baixar” la carpeta del repositori i obrir el Git Bash com s’ha indicat anteriorment i escriure: “Git clone (+ la url copiada anteriorment)”.
+
+Posteriorment desde dins de la carpeta del repositori en qüestió, repetir el procediment anterior per actualizar les versions dels arxius i carpetes. 

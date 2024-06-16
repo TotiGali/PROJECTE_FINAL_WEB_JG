@@ -11,19 +11,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <header>
+        <h1><a href="index.html"><font color="#8b0000">COMOBA</font></a></h1>
+        <p></p>
+    </header>
+    <h3>(Pàgina només per testejar funcions)</h3>
+    <hr>
     <div class="container">
-        <h1>Crear Pedido</h1>
+        <h1>Crear Comanda</h1>
         <form id="pedidoForm">
-            <label for="producto">Producto</label>
+            <label for="producto">Producte</label>
             <input type="text" id="producto" name="producto" required>
             
-            <label for="cantidad">Cantidad</label>
+            <label for="cantidad">Quantitat</label>
             <input type="number" id="cantidad" name="cantidad" required>
             
-            <button type="submit">Crear Pedido</button>
+            <button type="submit">Crear Comanda</button>
         </form>
         
-        <h2>Lista de Pedidos</h2>
+        <h2>Lista de Comandes</h2>
         <ul id="pedidosList"></ul>
     </div>
     <script src="js/script_pedidos.js"></script>

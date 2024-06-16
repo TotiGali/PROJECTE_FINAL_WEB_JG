@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"content="IE-edge">
+        <meta name="viweport" content="width=device-width, initial-scale=1.0">
+        <title>Pàgines enllaçades JG</title>
+        <style>
+            /* Estilos CSS*/
+            @media only screen and (-webkit-min-device-pixel-ratio: 2),
+              only screen and (min-resolution: 192dpi) {
+            /* Estilos para pantallas retina */
+            }
+            .background {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            }
+
+            .background::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('imatges/Guissona_B1920x960.jpg') no-repeat center center;
+                background-size: cover;
+                opacity: 0.4; /* Ajusta aquest valor per controlar el nivell de transparència */
+                z-index: -1;
+            }
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;   
+            }
+            header {
+                background-color: rgba(80, 80, 0, 0.3);
+                padding: 10px;
+                text-align: center;
+                left: 0;
+                top: 0;
+                width: 100%;
+                color:rgba(255, 119, 0, 0.6);
+            }
+            nav {
+                float: left;
+                width: 15%;
+                background-color: rgba(255, 255, 255, 0.5);
+                padding: 10px;
+            }
+            section {
+                float: left;
+                width: 60%;
+                margin: 0px;
+                padding: 30px;
+                width: 70%;
+                background-color: rgba(255,255,0, 0.3);  /* Això correspon al color HEX #ffff00 (groc) convertit a RGBA amb transparència 30%*/
+            }
+            footer {
+                background-color: rgba(255, 119, 0, 0.3);
+                padding: 10px;
+                text-align: center;
+                color: #ffffff;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                font-size: 15px;
+                height: 40px;
+            }
+            h1 {
+                text-align: left;
+                margin-bottom: 10px;
+                padding-left: 20px;
+            }
+            h2 {
+                text-align: left;
+                margin-bottom: 10px;
+                padding-left: 20px;
+                color: #8b0000;
+            }
+            p {
+                text-align: justify;
+                color: #8b007f;
+            }
+    
+            /* canvi de colors als enllaços */
+            a {
+                text-decoration: none; /* Eliminar subratllat predeterminat */
+                color: #000; /* Color de text predeterminat */
+            }
+            /* Estil per a l'enllaç quan es passa el ratolí per sobre */
+            nav ol li a:hover {
+                 color: rgba(0, 0, 255, 1.0); /* Color de text quan es passa el ratolí per sobre */
+            }   
+            .link-hover-1:hover {
+            color: rgb(0, 216, 216);
+            }
+            .link-hover-2:hover {
+            color: rgb(255, 0, 255);
+            }
+            .link-hover-3:hover {
+            color: rgb(85, 0, 255);
+            }
+    
+            /* Estil per a blocs de citacions */
+            blockquote {
+                margin: 0;
+                padding: 10px 20px;
+                background-color: rgba(69, 33, 1, 0.4);
+                border-left: 15px solid #019650;
+                font-family: 'Cinzel', sans-serif;
+                color: #ffffff;
+                text-align: right;
+            }
+    
+            /* efectes varis */
+            @keyframes parpadeo {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+            }
+            .parpadeante {
+            animation: parpadeo 3s infinite;
+            }
+            .tachado {
+            text-decoration: line-through;
+            }
+            .subrayado {
+            text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body class="background"> 
+        <header>
+            <h1>COMOBA</h1>
+            <p></p>
+        </header>
+        <aside>
+            <nav>
+                <ol>
+                    <li><a href="Index_pujar_imatges.html">Carregar imatges</a></li>
+                    <li><a href="index_pujar_pedidos.html">Fer comandes</a></li>
+                    <li><a href="index_30min.html">30' Torna la bici</a></li>
+                </ol>
+            </nav>
+        </aside>
+        <section>
+            <main>
+                <article>   
+                    <h2 class="parpadeante">Contracta els nostres serveis</h2>
+                    <hr>  
+                    <h3>Consultora de mobilitat Activa</h3>
+                    <hr>  
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <hr> 
+                    <p></p>
+                        <hr>      
+                        <blockquote>
+                            Especialistes en mobilitat i urbanisme amb perspectiva de genere
+                        </blockquote>
+                        <hr>  
+                </article>
+                <div>
+                    <ul>
+                        <li><a href="mailto:jordi@comoba.org" class="link-hover-1">Enviar email</a></li>
+                        <li><a href="https://www.linkedin.com/in/jordigali/m" class="link-hover-2">Linkedin</a></li>
+                    </ul>
+                </div>
+            </main>
+        </section>
+        <footer>
+            <h4>&copy; 2024 COMOBA</h4>
+        </footer>
+    </body>
+    </html>
